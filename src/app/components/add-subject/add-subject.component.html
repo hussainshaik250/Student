@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row justify-content-center align-items-center" style="height: 80vh;">
+    <div class="col-md-12">
+      <div class="card border-0 shadow p-3 h-100">
+        <div class="form-floating mb-3 text-center">
+          <h5 class="text-center text-warning">Add Subject</h5>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="subject_name" name="subject_name" [(ngModel)]="subject_name">
+          <label for="subject_name">Subject name</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="subject_code" name="subject_code" [(ngModel)]="subject_code">
+          <label for="subject_code">Subject Code</label>
+        </div>
+        <div class="form-floating mb-3">
+          <input type="text" class="form-control" id="no_of_students" name="no_of_students" [(ngModel)]="no_of_students">
+          <label for="no_of_students">No. Of Students</label>
+        </div>
+        <div class="button-prompt d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-success cancel-button" (click)="close_Dialog()">Cancel</button>
+          <button type="button" class="btn btn-outline-success ml-2" (click)="addSubject()">Update</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content within the toolbar */
+    width: 100%;
+  }
+  
+  .example-spacer {
+    flex: 1; /* This will take up all available space, pushing the content to the right */
+  }
+ 
+
+  

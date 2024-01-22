@@ -1,0 +1,47 @@
+<div class="container-fluid">
+    
+    <div class="row">
+      <div class="col">
+        <header class="header">
+          <app-header></app-header>
+        </header>
+      </div>
+    </div>
+  
+
+    <div class="row ">
+      <div class="col-2  sidebar">
+        <nav>
+          <a *ngIf="showStudentAdmin" class="sidebar-item hovered-element"[class.active]="activeTab === 'subjects'" (click)="setActiveTab('subjects')">Subjects</a>
+          <a  class="sidebar-item hovered-element"[class.active]="activeTab === 'students'" (click)="setActiveTab('students')" >Students</a>
+        </nav>
+      </div>
+      <div class="col main-content">
+        <main>
+          <ng-container *ngIf="showStudentAdmin; else otherComponent">
+            <ng-container *ngIf="(booleanVariableUsername$ | async) && !(booleanVariablePassword$ | async); else passwordComponent">
+              <app-username></app-username>
+            </ng-container>
+            <ng-template #passwordComponent>
+              <app-password *ngIf="(booleanVariablePassword$ | async); else otherComponents"></app-password>
+            </ng-template>
+            <ng-template #otherComponents>
+          <app-admin-subject *ngIf="activeTab === 'subjects'"></app-admin-subject>
+            <app-admin-studentlist *ngIf="activeTab === 'students'"></app-admin-studentlist>    
+            </ng-template>
+          </ng-container>
+          <ng-template #otherComponent>
+            <ng-container *ngIf="(booleanVariableUsername$ | async) && !(booleanVariablePassword$ | async); else passwordComponent">
+              <app-username></app-username>
+            </ng-container>
+            <ng-template #passwordComponent>
+              <app-password *ngIf="(booleanVariablePassword$ | async); else otherComponents"></app-password>
+            </ng-template>
+            <ng-template #otherComponents>
+              <app-student></app-student>
+            </ng-template>
+          </ng-template>
+        </main>
+      </div>
+    </div>
+  </div>

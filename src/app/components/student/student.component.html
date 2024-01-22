@@ -1,0 +1,45 @@
+
+<div class="header-container">
+    <span class="users-heading">Subject List</span>
+    
+    
+    </div>
+  
+  <div class="col-md-12 mt-2">
+      
+      <div class="card p-3 shadow">
+          <div class="card-body">
+              <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col" >Subject name</th>
+                      <th scope="col">Subject Code</th>
+                      <th scope="col">No Of Students</th>
+                      
+                      <th scope="col" style="text-align: left; margin-left: 20px;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <ng-container *ngIf="!set_mode; else otherComponent"> -->
+                    <tr *ngFor="let subject of subjectList"  >
+                      <td >{{subject.subject_name}}</td>
+                      <td>{{subject.subject_code}}</td>
+                      <td>{{subject.no_of_students}}</td>
+                      <td >
+                        <div class="permission-buttons">
+                        <button mat-button color="primary"(click)="addSubject(subject)" class="primary" [disabled]="subject.isclicked" > Active  </button>&nbsp;&nbsp;
+                        <button mat-button color="warn"(click)="removeSubject(subject)" class="deny" [disabled]="!subject.isclicked"> InActive  </button>
+                        </div>
+                      </td>
+                      
+                      
+                      
+                    </tr>
+                    
+                  </tbody>
+                </table>
+                <!-- <button (click)="copyDataToSemester()">save</button> -->
+  
+      
+  </div>
+  

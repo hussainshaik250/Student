@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "student",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

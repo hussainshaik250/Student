@@ -1,0 +1,15 @@
+.butt{
+    flex-wrap: nowrap;
+}
+.button-prompt{
+    gap:20px;
+}
+.cancel-button{
+    border-color: gray;
+    color:grey;
+    
+}
+.cancel-button:hover{
+    background-color: grey;
+    color: white;
+}

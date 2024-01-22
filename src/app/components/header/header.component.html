@@ -1,0 +1,27 @@
+<p>
+    <mat-toolbar color="primary" class="toolbar">
+      <!-- Subject Selector on the left -->
+      <span style="margin-left: 20px;">Subject Selector</span>
+  
+      <!-- Spacer to push the content to the right -->
+      <span class="example-spacer"></span>
+  
+      <!-- Container for username and profile icon -->
+      <div>
+        <!-- Display the username -->
+        <span> {{user | capitalize }} </span>
+  
+        
+        <button mat-icon-button class="example-icon" aria-label="Profile icon" [matMenuTriggerFor]="menu">
+          <mat-icon>account_circle</mat-icon>
+        </button>
+        
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="userInfo()">Profile Details</button>
+          <button mat-menu-item (click)="passwordChange()">Change Password</button>
+          <button mat-menu-item (click)="onLogout()">Logout</button>
+        </mat-menu>
+        
+      </div>
+    </mat-toolbar>
+  </p>

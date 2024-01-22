@@ -1,0 +1,57 @@
+.green-row button {
+    background-color: green;
+   
+  }
+ 
+.butto{
+    margin-left: 1100px;
+    margin-right:0px
+}
+.permission-buttons  {
+  display: flex;
+  gap: 10px;
+  margin-right: 8px;
+  padding: 8px 16px;
+  
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.permission-buttons button:disabled {
+  opacity: 0.2; /* Adjust the opacity for disabled buttons */
+  cursor: not-allowed;
+}
+
+.permission-buttons button.primary {
+  border: 1px solid #007bff;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+.permission-buttons button.primary:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.permission-buttons button.deny {
+  border: 1px solid #dc3545;
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.permission-buttons button.deny:hover {
+  background-color: #c82333;
+  color: #ffffff;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.users-heading {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+  color: black;
+}
+

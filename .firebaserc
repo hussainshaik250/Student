@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "subject-selector": {
+      "hosting": {
+        "student": [
+          "subject-selector"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "subject-selector"
+  }
+}

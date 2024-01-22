@@ -1,0 +1,42 @@
+<div class="header-container">
+    <span class="users-heading">Subject List</span>
+    <div class="search-container">
+      <!-- <input matInput  placeholder="Search" class="search" #input  > -->
+      
+      
+      <button mat-raised-button color="primary" (click)="addSubject()">Add Subject</button>
+    </div>
+</div>
+  
+        <div class="col-md-12 mt-2">
+            <!-- <h5 class="text-danger"> Subject List</h5> -->
+            <div class="card p-3 shadow">
+                <div class="card-body">
+                    <table class="table table-hover">
+                        <thead>
+                          <tr>
+                            <th scope="col" >Subject name</th>
+                            <th scope="col">Subject Code</th>
+                            <th scope="col">No Of Students</th>
+                            
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let subject of subjectsList">
+                            <td >{{subject.subject_name}}</td>
+                            <td>{{subject.subject_code}}</td>
+                            <td>{{subject.no_of_students}}</td>
+                            
+                            <td>
+                                <button class="btn btn-outline-danger" (click)="deleteSubject(subject)">Delete</button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div> 
+            </div>
+        </div>
+    
+
+

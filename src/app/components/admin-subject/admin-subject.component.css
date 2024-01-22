@@ -1,0 +1,26 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .users-heading {
+    font-size: 24px; /* Adjust the font size as needed */
+    font-weight: bold;
+    color: black;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+    /* Push the search container to the right */
+    margin-right: 5px;
+    
+  }
+  
+  .search {
+    margin-right: 5px; /* Adjust the margin as needed */
+    border-radius: 10px;
+  }
